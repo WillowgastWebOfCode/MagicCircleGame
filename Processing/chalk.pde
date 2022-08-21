@@ -1,23 +1,25 @@
 class Chalk{
- float   xPosition, yPosition;
+ PVector position;
  PImage chalkUp;
- PImage chalkDown;
+ PImage chalkDown; 
+ ChalkDrawing chalkDrawing;
+ 
+ Chalk() {
+   chalkUp   = loadImage("../Assets/ChalkDrawing/ChalkUp.png");
+   chalkDown = loadImage("../Assets/ChalkDrawing/ChalkDown.png");
+   position = new PVector(mouseX, mouseY);
+ }
+ 
  void drawing(){
    if (mousePressed && mouseButton == LEFT){
-     image(chalkDown, xPosition, yPosition);
+     image(chalkDown, position.x, position.y);
    } else{
-     image(chalkUp, xPosition, yPosition);
+     image(chalkUp, position.x, position.y);
    }
- }
- Chalk() {
-   chalkUp    = loadImage("../Assets/ChalkDrawing/ChalkUp.png");
-   chalkDown  = loadImage("../Assets/ChalkDrawing/ChalkDown.png");
-   xPosition = mouseX;
-   yPosition = mouseY;
- }
+ } 
  void updatePosition(){
-   xPosition = mouseX-chalkUp.width/2;
-   yPosition = mouseY-chalkUp.height/2;
+   position.x = mouseX-chalkUp.width/2;
+   position.y = mouseY-chalkUp.height/2;
  }
  void update(){
    updatePosition();
