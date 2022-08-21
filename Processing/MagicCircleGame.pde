@@ -1,4 +1,5 @@
 Chalk chalk;
+ChalkDrawing  chalkDrawing;
 
 void setup(){
   // screen
@@ -9,9 +10,11 @@ void setup(){
   
   // objects
   chalk = new Chalk();
+  chalkDrawing = new ChalkDrawing();
 }
 
 void draw(){
   background(0);
+  chalkDrawing.update();
   chalk.update();
 }
