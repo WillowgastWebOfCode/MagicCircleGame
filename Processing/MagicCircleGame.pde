@@ -1,10 +1,17 @@
+Chalk chalk;
+
 void setup(){
+  // screen
   fullScreen();
-  background(0);
+  noCursor();
   noStroke();
   fill(112);
+  
+  // objects
+  chalk = new Chalk();
 }
 
 void draw(){
-  
+  background(0);
+  chalk.update();
 }
