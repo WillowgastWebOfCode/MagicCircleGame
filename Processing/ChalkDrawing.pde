@@ -63,14 +63,10 @@ class ChalkDrawing{
     }
   }
   
-  void update(){
-    if (mousePressed && mouseButton == LEFT){
-      if (checkMouseDistance()){
+  void drawNewItem(){
+    if (checkMouseDistance()){
         lines.add(new ChalkLine(drawThickness));
       }
-      displayDrawing();
-    } else {
-      erraseDrawing();
-    }    
+    displayDrawing();    
   }
 }
