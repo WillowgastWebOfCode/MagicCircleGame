@@ -1,7 +1,3 @@
-enum MagicState{
- NONE, CHARGED 
-}
-
 class MagicDrawing{
   ArrayList<MagicCircle> magicCircles;
   //ArrayList<MagicArrow> magicArrows;
@@ -24,12 +20,11 @@ class MagicDrawing{
        magicCircles.get(i).update();
      }      
    }
-   /*
+   /*// Update all arrows
    if (magicArrows.size()>0)
      for int i =0; i<magicArrows.size(); i++){
        magicArrows.get(i).update();
      }
    */
-   
  }   
 }
