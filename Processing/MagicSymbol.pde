@@ -5,7 +5,7 @@ class MagicSymbol{
     this.symbolType = _symbolType;
     this.position = new PVector(_position.x,_position.y );
   }
-  void draw(){
+  void update(){
     switch (symbolType){
     case 0:
       break;

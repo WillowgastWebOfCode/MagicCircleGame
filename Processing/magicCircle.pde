@@ -30,7 +30,7 @@ class MagicCircle{
   }
   void addSymbol(){
   }
-  void draw(){
+  void update(){
     rotate(angle);
     ellipse(centerPosition.x, centerPosition.y, lengths.x, lengths.y);
   }
