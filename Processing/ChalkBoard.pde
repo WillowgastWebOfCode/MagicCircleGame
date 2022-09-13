@@ -16,6 +16,8 @@ class ChalkBoard{
     if (mousePressed && mouseButton == LEFT){
       chalkDrawing.drawNewItem();
     } else {
+      recogniseItem();
+      drawNewItem();
       chalkDrawing.erraseDrawing();
     }
     chalk.update();
