@@ -1,11 +1,11 @@
 class MagicDrawing{
   ArrayList<MagicCircle> magicCircles;
-  //ArrayList<MagicArrow> magicArrows;
+  ArrayList<MagicArrow> magicArrows;
   MagicState magicState;
   MagicDrawing(){
     magicCircles = new ArrayList<MagicCircle>();
     magicState = MagicState.NONE;
-    // magicArrows = new ArrayList<MagicArrow>();
+    magicArrows = new ArrayList<MagicArrow>();
  }
  void addMagicCircle(){
  }
@@ -20,11 +20,10 @@ class MagicDrawing{
        magicCircles.get(i).update();
      }      
    }
-   /*// Update all arrows
+   // Update all arrows
    if (magicArrows.size()>0)
-     for int i =0; i<magicArrows.size(); i++){
+     for (int i =0; i<magicArrows.size(); i++){
        magicArrows.get(i).update();
      }
-   */
  }   
 }
