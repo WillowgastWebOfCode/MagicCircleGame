@@ -1,0 +1,4 @@
+enum ArrowType{
+  CONNECT,
+  TRANSPORT
+}
