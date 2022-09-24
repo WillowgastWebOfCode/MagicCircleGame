@@ -1,0 +1,3 @@
+enum MagicState{
+ NONE, CHARGED 
+}
