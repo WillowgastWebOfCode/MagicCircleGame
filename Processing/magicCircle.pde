@@ -7,7 +7,7 @@ class MagicCircle{
     centerPosition = _centerPosition;
     lengths = _lengths;
     angle = _angle;
-    magicSymbol = new MagicSymbol(0, centerPosition);
+    magicSymbol = new MagicSymbol(SymbolType.NONE, centerPosition);
   }
   PVector getPosition(){
     return centerPosition;
@@ -28,9 +28,11 @@ class MagicCircle{
     
     return arrowOnElipse;
   }
-  void addSymbol(){
+  void setSymbol(SymbolType symbolType){
+    magicSymbol.setSymbolType(symbolType);
+    magicSymbol.setPosition(centerPosition);
   }
-  void draw(){
+  void update(){
     rotate(angle);
     ellipse(centerPosition.x, centerPosition.y, lengths.x, lengths.y);
   }

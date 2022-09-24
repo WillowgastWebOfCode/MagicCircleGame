@@ -1,10 +1,10 @@
 class ChalkBoard{
   ChalkDrawing chalkDrawing;
-  //MagicDrawing magicDrawing;
+  MagicDrawing magicDrawing;
   Chalk chalk;
   ChalkBoard(){
     this.chalkDrawing = new ChalkDrawing();
-    //this.magicDrawing = new MagicDrawing();
+    this.magicDrawing = new MagicDrawing();
     this.chalk = new Chalk();
   }
   void drawNewItem(){
@@ -12,11 +12,14 @@ class ChalkBoard{
   void recogniseItem(){
   }
   void update(){
-    chalk.update();
+    magicDrawing.update();
     if (mousePressed && mouseButton == LEFT){
       chalkDrawing.drawNewItem();
     } else {
+      recogniseItem();
+      drawNewItem();
       chalkDrawing.erraseDrawing();
     }
+    chalk.update();
   }
 }
