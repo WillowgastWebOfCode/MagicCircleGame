@@ -7,13 +7,16 @@ class MagicDrawing{
     magicState = MagicState.NONE;
     magicArrows = new ArrayList<MagicArrow>();
  }
- void addMagicCircle(PVector _centerPosition, PVector _lengths, float _angle){
-   magicCircles.add(new MagicCircle(_centerPosition, _lengths, _angle));
+ void addMagicCircle(PVector centerPosition, PVector lengths, float angle){
+   magicCircles.add(new MagicCircle(centerPosition, lengths, angle));
  }
- void addMagicArrow(ArrowType _arrowType,MagicCircle _beginCircle, MagicCircle _endCircle , float _arrowWidth, color _arrowColor){
-   magicArrows.add(new MagicArrow(_arrowType, _beginCircle, _endCircle , _arrowWidth, _arrowColor));
+ void addMagicArrow(ArrowType arrowType,MagicCircle beginCircle, MagicCircle endCircle , float arrowWidth, color arrowColor){
+   magicArrows.add(new MagicArrow(arrowType, beginCircle, endCircle , arrowWidth, arrowColor));
  }
- void addSymbol(){
+ void addSymbol(SymbolType symbolType, int magicCircleNumber){
+   MagicCircle magicCircle = magicCircles.get(magicCircleNumber);
+   magicCircle.setSymbol(symbolType);
+   
  }
  void update(){
    // Update all circles
