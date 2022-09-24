@@ -8,9 +8,10 @@ class MagicDrawing{
     magicArrows = new ArrayList<MagicArrow>();
  }
  void addMagicCircle(PVector _centerPosition, PVector _lengths, float _angle){
-   magicCircle.add(new MagicCircle(_centerPosition, _lengths, _angle));
+   magicCircles.add(new MagicCircle(_centerPosition, _lengths, _angle));
  }
- void addMagicArrow(){
+ void addMagicArrow(ArrowType _arrowType,MagicCircle _beginCircle, MagicCircle _endCircle , float _arrowWidth, color _arrowColor){
+   magicArrows.add(new MagicArrow(_arrowType, _beginCircle, _endCircle , _arrowWidth, _arrowColor));
  }
  void addSymbol(){
  }
