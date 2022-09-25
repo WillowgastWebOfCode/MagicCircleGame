@@ -67,8 +67,13 @@ class ChalkDrawing{
   
   void drawNewItem(){
     if (checkMouseDistance()){
+      if (lines.size() > 0){
+        ChalkLine line = lines.get(lines.size()-1);
+        lines.add(new ChalkLine(drawThickness, line.end));
+      } else {
         lines.add(new ChalkLine(drawThickness));
       }
+    }
     displayDrawing();    
   }
 }
