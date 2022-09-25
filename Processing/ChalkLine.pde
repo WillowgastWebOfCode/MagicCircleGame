@@ -6,6 +6,11 @@ class ChalkLine{
     this.end = new PVector(mouseX, mouseY);
     this.strokeWeight = strokeWeight;
   }
+  ChalkLine(float strokeWeight, PVector previousEndPosition){
+    this.start = new PVector(previousEndPosition.x, previousEndPosition.y);
+    this.end = new PVector(mouseX, mouseY);
+    this.strokeWeight = strokeWeight;
+  }
   void update(){
     stroke(220);
     strokeWeight(strokeWeight);
