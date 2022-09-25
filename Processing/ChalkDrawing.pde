@@ -1,8 +1,10 @@
 class ChalkDrawing{
   ArrayList<ChalkLine> lines;
   float drawThickness;
+  float newLineDistance;
   ChalkDrawing(){
     drawThickness = 16;
+    newLineDistance = 12;
     lines = new ArrayList<ChalkLine>();    
   }
   
@@ -11,7 +13,7 @@ class ChalkDrawing{
       ChalkLine line = lines.get(lines.size()-1);
       PVector mouse = new PVector(mouseX, mouseY);
       PVector distance = mouse.sub(line.end);
-      if (distance.mag() < drawThickness/2){
+      if (distance.mag() < newLineDistance){
         return false;
       }      
     }
