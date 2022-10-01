@@ -1,12 +1,13 @@
 class MagicCircle{
-  PVector centerPosition;
-  PVector lengths;
+  PVector centerPosition = new PVector();
+  PVector lengths = new PVector();
   float angle;
   MagicSymbol magicSymbol;
-  MagicCircle(PVector _centerPosition, PVector _lengths, float _angle){
+  MagicCircle(PVector _centerPosition, PVector elipseScales){
     centerPosition = _centerPosition;
-    lengths = _lengths;
-    angle = _angle;
+    lengths.x = elipseScales.x;
+    lengths.y = elipseScales.y;
+    angle = elipseScales.z;
     magicSymbol = new MagicSymbol(SymbolType.NONE, centerPosition);
   }
   PVector getPosition(){
