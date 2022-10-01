@@ -34,7 +34,10 @@ class MagicCircle{
     magicSymbol.setPosition(centerPosition);
   }
   void update(){
+    pushMatrix();
+    translate(centerPosition.x, centerPosition.y);
     rotate(angle);
-    ellipse(centerPosition.x, centerPosition.y, lengths.x, lengths.y);
+    ellipse(0, 0, lengths.x, lengths.y);
+    popMatrix();
   }
 }

@@ -54,7 +54,7 @@ class ChalkDrawing{
         angle = atan((chalkLine.start.y-centerPoint.y)/(chalkLine.start.x-centerPoint.x));
       }
     }
-    return new PVector(min, max, angle);
+    return new PVector(2*max, 2*min, angle);
   }
   
   void erraseDrawing(){
