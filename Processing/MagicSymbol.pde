@@ -1,9 +1,9 @@
 class MagicSymbol{
   SymbolType symbolType;
   PVector position;
-  MagicSymbol(SymbolType _symbolType, PVector _position){
-    this.symbolType = _symbolType;
-    this.position = new PVector(_position.x,_position.y );
+  MagicSymbol(SymbolType symbolType, PVector position){
+    this.symbolType = symbolType;
+    this.position = new PVector(position.x,position.y );
   }
   void update(){
     switch (symbolType){
