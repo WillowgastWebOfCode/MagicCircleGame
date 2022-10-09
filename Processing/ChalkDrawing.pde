@@ -40,7 +40,8 @@ class ChalkDrawing{
     return centerPoint;
   }
   
-  PVector findEllipseValues(PVector centerPoint){
+  ElipseData findEllipseData(){
+    PVector centerPoint = findCenterPoint();
     float max = 0;
     float min = mag(width,height);
     float angle = 0;
@@ -54,7 +55,7 @@ class ChalkDrawing{
         angle = atan((chalkLine.start.y-centerPoint.y)/(chalkLine.start.x-centerPoint.x));
       }
     }
-    return new PVector(2*max, 2*min, angle);
+    return new ElipseData(2*max, 2*min, angle, centerPoint);
   }
   
   void erraseDrawing(){

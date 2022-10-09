@@ -10,17 +10,13 @@ class ChalkBoard{
   void drawNewItem(DrawType drawType){
     switch (drawType){
       case CIRCLE:
-        PVector centerPoint = new PVector(); 
-        PVector elipseScales = new PVector();
-        
-        centerPoint = chalkDrawing.findCenterPoint();
-        elipseScales = chalkDrawing.findEllipseValues(centerPoint);
-        
-        magicDrawing.addMagicCircle(centerPoint, elipseScales);
+        ElipseData elipseData = chalkDrawing.findEllipseData();
+        magicDrawing.addMagicCircle(elipseData);
         break;
         
       case ARROW:
         break;
+        
       case SYMBOL:
         break;
     }

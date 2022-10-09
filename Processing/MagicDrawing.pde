@@ -7,8 +7,8 @@ class MagicDrawing{
     magicState = MagicState.NONE;
     magicArrows = new ArrayList<MagicArrow>();
  }
- void addMagicCircle(PVector centerPosition, PVector elipseScales){
-   magicCircles.add(new MagicCircle(centerPosition, elipseScales));
+ void addMagicCircle(ElipseData elipseData){
+   magicCircles.add(new MagicCircle(elipseData));
  }
  void addMagicArrow(ArrowType arrowType,MagicCircle beginCircle, MagicCircle endCircle , float arrowWidth, color arrowColor){
    magicArrows.add(new MagicArrow(arrowType, beginCircle, endCircle , arrowWidth, arrowColor));
