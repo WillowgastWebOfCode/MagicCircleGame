@@ -5,12 +5,12 @@ class MagicArrow{
   MagicCircle beginCircle;
   MagicCircle endCircle;
   
-  MagicArrow(ArrowType _arrowType,MagicCircle _beginCircle, MagicCircle _endCircle , float _arrowWidth, color _arrowColor){
-    arrowType = _arrowType;
-    arrowWidth = _arrowWidth;
-    arrowColor = _arrowColor;
-    beginCircle = _beginCircle;
-    endCircle = _endCircle;
+  MagicArrow(ArrowType arrowType,MagicCircle beginCircle, MagicCircle endCircle , float arrowWidth, color arrowColor){
+    this.arrowType = arrowType;
+    this.arrowWidth = arrowWidth;
+    this.arrowColor = arrowColor;
+    this.beginCircle = beginCircle;
+    this.endCircle = endCircle;
   }
   
   void update(){
