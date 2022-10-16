@@ -31,6 +31,7 @@ class MagicCircle{
   }
   void update(){
     pushMatrix();
+    noFill();
     translate(elipseData.centerPosition.x, elipseData.centerPosition.y);
     rotate(elipseData.angle);
     ellipse(0, 0, elipseData.length, elipseData.width);
